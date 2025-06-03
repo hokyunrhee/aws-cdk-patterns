@@ -1,0 +1,43 @@
+{
+  "name": "aws-cdk-patterns",
+  "version": "0.1.0",
+  "bin": {
+    "aws-cdk-patterns": "bin/aws-cdk-patterns.js"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "lint": "oxlint --tsconfig=tsconfig.json",
+    "format": "prettier --write **/*.{js,ts}",
+    "cdk": "cdk"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.198.0",
+    "constructs": "^10.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "22.7.9",
+    "aws-cdk": "2.1017.1",
+    "jest": "^29.7.0",
+    "oxlint": "^0.17.0",
+    "prettier": "^3.5.3",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0"
+  },
+  "packageManager": "pnpm@10.11.0",
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": [
+      "pnpm run lint",
+      "pnpm run format"
+    ]
+  }
+}
